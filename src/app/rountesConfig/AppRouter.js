@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "../components/Layouts/Header";
 import Page404 from "../components/Pages/Page404.component";
+import LayoutChallenge from "../components/css-grid/LayoutChallenge.component";
 
 
 
@@ -21,6 +22,7 @@ const AppRouter = () => (
 			<Header />
 			<Switch>
 				<Route path="/" exact component={Home} />
+				<Route path="/layout-challenge" component={LayoutChallenge} />
 				<Route path="*" component={Page404} />
 			</Switch>
 		</>

@@ -15,8 +15,17 @@ const Header = () => (
 					>
 						Dashboard
 					</NavLink>
+
+					<NavLink
+						to="/layout-challenge"
+						activeClassName="nav-link__active"
+						className=""
+						className="nav--links"
+						exact
+					>
+						Layout Challenge
+					</NavLink>
 				</li>
-				
 			</ul>
 		</nav>
 	</header>

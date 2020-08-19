@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const LayoutChallenge = () => {
   return (
@@ -23,7 +22,7 @@ const LayoutChallenge = () => {
       <main className="grid__item grid--main">
         <h1>Main content</h1>
       </main>
-      <footer className="grid__item grid--main">
+      <footer className="grid__item grid--footer">
         <p> Grid Footer</p>
       </footer>
     </div>

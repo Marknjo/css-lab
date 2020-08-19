@@ -20,7 +20,7 @@
 **/
 
 .grid--header {
-  grid-column: 1 / 5;
+  grid-column: 1 / span 4;
   grid-row: 1/2;
 }
 
@@ -63,7 +63,7 @@ grid-row: 2/3;
 
 .grid--main {
   grid-row: 3 / 4;
-  grid-column: 1 / 4;
+  grid-column: 1 / span 3;
   min-height: 600px;
 }
 
@@ -73,5 +73,5 @@ grid-row: 2/3;
 **/
 .grid--footer {
   grid-row: 4 / 5;
-  grid-column: 1 / 5;
+  grid-column: 1 / span 4;
 }

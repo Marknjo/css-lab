@@ -1,12 +1,3 @@
-import React, { StrictMode } from "react";
-import ReactDOM from "react-dom";
-
-import App from "./app/App";
-
-const rootApp = (
-	<StrictMode>
-		<App />
-	</StrictMode>
-);
-
-ReactDOM.render(rootApp, document.getElementById("root"));
+import "./scripts/app/app";
+import "./styles/main.scss";
+console.log("App in the index page");

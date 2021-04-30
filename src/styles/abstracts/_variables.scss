@@ -33,15 +33,16 @@ $brand-color-dark: #28b485 !default;
 
 /// Light grey
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+$light-grey-1: #ededed !default;
+$light-grey-2: #f7f7f7 !default;
 
 /// Medium grey
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
+$mid-grey: #999999 !default;
 
 /// Dark grey
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+$dark-grey: #444444 !default;
 
 /// Container's maximum width
 /// @type Length

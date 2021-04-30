@@ -7,6 +7,8 @@
  */
 html {
   box-sizing: border-box;
+
+  font-size: 62.5%;
 }
 
 /**
@@ -19,6 +21,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -32,4 +36,13 @@ a {
     color: $text-color;
     text-decoration: underline;
   }
+}
+
+/**
+* Basic Body features
+*/
+
+body {
+  margin: 3rem;
+  background-color: $light-grey-2;
 }

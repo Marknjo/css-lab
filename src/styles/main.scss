@@ -8,7 +8,8 @@
 @import "vendors/normalize", "vendors/styles";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/helpers";
+@import "base/utility", "base/base", "base/fonts", "base/typography",
+  "base/helpers";
 
 // 4. Layout-related sections
 @import "layout/header", "layout/footer";

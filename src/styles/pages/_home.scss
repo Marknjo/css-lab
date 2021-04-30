@@ -14,4 +14,18 @@
   background-repeat: no-repeat;
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 75%, 0 100%);
+
+  position: relative;
+
+  &__content {
+    @include centerBox;
+    margin-top: -6rem;
+    color: $light-grey-2;
+  }
+}
+
+.logo {
+  width: 8rem;
+  height: auto;
+  display: inline-block;
 }

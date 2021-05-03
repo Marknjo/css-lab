@@ -26,12 +26,14 @@ body {
     font-size: 6rem;
     font-weight: 700;
     letter-spacing: 3.5rem;
+    animation: bounce-left 2s 1s backwards;
   }
 
   &--sub {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 1.75rem;
+    animation: bounce-right 2s 3s backwards;
   }
 }
 

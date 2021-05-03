@@ -100,4 +100,8 @@
       background-color: $brand-color;
     }
   }
+
+  &--hero {
+    animation: slideFromBottom 1.2s 5s backwards;
+  }
 }

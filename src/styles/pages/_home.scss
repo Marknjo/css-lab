@@ -1,8 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+:root {
+  --doc-height: calc(80vh - 6rem);
+  --main-top-size: calc(var(--doc-height) * 0.25);
+}
+
 .hero {
-  height: calc(80vh - 3rem);
+  height: calc(80vh - 6rem);
   background-image: linear-gradient(
       to bottom right,
       rgba($brand-color-light, 0.8),
@@ -29,4 +34,15 @@
   width: 8rem;
   height: auto;
   display: inline-block;
+}
+
+/**
+* Style Main 
+*/
+main {
+  background-color: $light-grey-2;
+
+  margin-top: calc(var(--main-top-size) * -1);
+
+  padding-top: calc(var(--main-top-size) + 8rem);
 }

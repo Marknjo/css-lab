@@ -46,3 +46,17 @@ main {
 
   padding-top: calc(var(--main-top-size) + 8rem);
 }
+
+/**
+*  Tours Section common styles
+*  OLd school styling using floats:
+*  @Todo: Create custom CSS grid
+*  @author: Mark
+*/
+.tours {
+  &__left {
+  }
+
+  &__right {
+  }
+}

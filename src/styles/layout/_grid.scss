@@ -3,24 +3,6 @@
 // It uses old styles method of styling pages
 // -----------------------------------------------------------------------------
 
-@mixin colBase {
-}
-
-///  Grid Right Margins
-///  Media Querries ready
-///  @author: Mark Njoroge
-//
-
-$grid-column-gap-xlg: 8rem;
-$grid-column-gap-lg: 6rem;
-$grid-column-gap-md: 4rem;
-$grid-column-gap-sm: 2rem;
-$grid-column-gap-xs: 21rem;
-
-///  Main Grid Max-width Variable
-///  @author: Mark Njoroge
-$grid-width-lg: 114rem;
-
 .container {
   &-fw {
     max-width: 100%;
@@ -45,11 +27,6 @@ $grid-width-lg: 114rem;
     &:not(:last-of-type) {
       margin-right: $grid-column-gap-lg;
     }
-    //remove
-    padding: 2rem;
-    background-color: orangered;
-    color: #fff;
-    font-size: 3rem;
   }
 }
 

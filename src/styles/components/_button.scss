@@ -104,4 +104,27 @@
   &--hero {
     animation: slideFromBottom 1.2s 5s backwards;
   }
+
+  &--text {
+    &,
+    &:link,
+    &:visited {
+      border-bottom: 1px solid $brand-color;
+      padding: 0.4rem 0.8rem;
+      color: $brand-color;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $brand-color;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
 }

@@ -48,15 +48,24 @@ main {
 }
 
 /**
-*  Tours Section common styles
-*  OLd school styling using floats:
-*  @Todo: Create custom CSS grid
-*  @author: Mark
+*  Features Section common styles
 */
-.tours {
-  &__left {
-  }
 
-  &__right {
+.features {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($brand-color-light, 0.5),
+      rgba($brand-color-dark, 0.8)
+    ),
+    url(../assets/images/nat-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: skewY(-7deg);
+  padding: 15rem 0;
+
+  & > * {
+    transform: skewY(7deg);
   }
 }

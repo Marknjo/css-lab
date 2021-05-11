@@ -15,7 +15,8 @@
 @import "layout/grid", "layout/header", "layout/footer";
 
 // 5. Components
-@import "components/button", "components/gallery", "components/card";
+@import "components/button", "components/gallery", "components/card",
+  "components/flip-card";
 
 // 6. Page-specific styles
 @import "pages/home";

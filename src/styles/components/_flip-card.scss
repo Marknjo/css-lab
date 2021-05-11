@@ -1,0 +1,72 @@
+$card-min-height: 25rem;
+
+.flip-card {
+  position: relative;
+  min-height: $card-min-height;
+  perspective: 150rem;
+  perspective-origin: right;
+
+  //remove after implementing flip function
+  text-align: center;
+  font-size: 2rem;
+  vertical-align: middle;
+
+  &__front,
+  &__back {
+    min-height: $card-min-height;
+    width: 100%;
+    border-radius: 0.4rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    backface-visibility: hidden;
+    transform-origin: center;
+    transition: all 0.4s ease-out;
+
+    box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+    overflow: hidden;
+  }
+
+  &__front {
+    background-color: #fff;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    &--1 {
+      background-image: linear-gradient(
+        to bottom right,
+        $cc-explore-light,
+        $cc-explore-dark
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to bottom right,
+        $cc-hiker-light,
+        $cc-hiker-dark
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to bottom right,
+        $cc-adv-light,
+        $cc-adv-dark
+      );
+    }
+  }
+
+  //flip
+  &:hover > &__back {
+    transform: rotateY(0);
+  }
+
+  //flip
+  &:hover > &__front {
+    transform: rotateY(-180deg);
+  }
+}

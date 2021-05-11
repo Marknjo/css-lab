@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file is used to style card components in the features section
+// The card contains an SVG font/font
+// -----------------------------------------------------------------------------
+
+.card {
+  background-color: rgba($light-grey-1, 0.4);
+  border-radius: 0.4rem;
+  box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+  text-align: center;
+  transition: all 0.2s ease-out;
+
+  &__img {
+    display: inline-block;
+    font-size: 6rem;
+    color: $brand-color;
+  }
+
+  /* &__title {
+  }
+ */
+  &__text {
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 2rem 6rem rgba(#000, 0.4);
+  }
+}

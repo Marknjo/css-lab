@@ -12,8 +12,15 @@
 
   &__img {
     display: inline-block;
-    font-size: 6rem;
-    color: $brand-color;
+    font-size: 6.4rem;
+    color: transparent;
+    background-image: linear-gradient(
+      to bottom right,
+      $brand-color-light,
+      $brand-color-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   /* &__title {

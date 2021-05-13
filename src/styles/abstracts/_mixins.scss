@@ -50,3 +50,23 @@
     clear: both;
   }
 }
+
+//
+@mixin cardBgImg($lightColor, $darkColor, $img) {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($lightColor, 0.2),
+      rgba($darkColor, 0.4)
+    ),
+    url($img);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25rem;
+  width: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  filter: sepia(0.2);
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}

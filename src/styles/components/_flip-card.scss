@@ -72,4 +72,78 @@ $card-min-height: 25rem;
   &:hover > &__front {
     transform: rotateY(-180deg);
   }
+
+  //Styles for interior elements
+  //Front Side
+  &__img {
+    &--1 {
+      @include cardBgImg(
+        $cc-explore-light,
+        $cc-explore-dark,
+        "../assets/images/nat-5.jpg"
+      );
+      /* background-image: linear-gradient(
+          to bottom right,
+          rgba($cc-explore-light, 0.2),
+          rgba($cc-explore-dark, 0.4)
+        ),
+        url(../assets/images/nat-5.jpg); */
+      /*  background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 25rem;
+      width: 100%;
+
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      filter: sepia(0.2);
+      border-top-left-radius: 0.4rem;
+      border-top-right-radius: 0.4rem; */
+    }
+
+    &--2 {
+      @include cardBgImg(
+        $cc-hiker-light,
+        $cc-hiker-dark,
+        "../assets/images/nat-6.jpg"
+      );
+    }
+
+    &--3 {
+      @include cardBgImg(
+        $cc-adv-light,
+        $cc-adv-dark,
+        "../assets/images/nat-7.jpg"
+      );
+    }
+  }
+
+  &__title {
+    &--1 {
+    }
+
+    &--2 {
+    }
+
+    &--3 {
+    }
+  }
+
+  &__lists {
+  }
+
+  &__list {
+  }
+
+  &__text {
+  }
+
+  //Back Side
+  &__only-text {
+  }
+
+  &__price {
+  }
+
+  &__price {
+  }
 }

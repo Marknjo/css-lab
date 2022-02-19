@@ -1,3 +1,1 @@
-import "./utils/utils";
-
-console.log("App");
+import './utils/utils';

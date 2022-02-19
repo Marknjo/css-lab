@@ -2,7 +2,9 @@
 
 ## :balloon: Overview
 
-A project base for experimenting with CSS Concepts. 
+A project entry for experimenting with CSS Concepts.
+
+No dependencies.
 
 > Nothing important except my experiments with different stuff in CSS.
 

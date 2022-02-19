@@ -2,10 +2,3 @@ installs.txt
 node_modules
 public
 installs.txt
-assets
-*.jpg 
-*.mp4
-*.webm
-*.png
-*.svg
-

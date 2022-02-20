@@ -39,3 +39,23 @@ a {
 body {
   padding: 3rem;
 }
+
+// Style header component
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-dark, 0.8),
+      rgba($color-primary-light, 0.8)
+    ),
+    url('../assets/images/hero.jpg');
+  background-position: top;
+  background-size: cover;
+  height: 95vh;
+
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  position: relative;
+}
+
+// Style logo component
+// Style heading component
+// Style link button component

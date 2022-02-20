@@ -18,6 +18,8 @@ html {
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
@@ -25,7 +27,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $color-primary;
   text-decoration: none;
 
   @include on-event {
@@ -34,26 +36,6 @@ a {
   }
 }
 
-/*
-* Test Tyles
-* Removet them on project initialization
-*/
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, minmax(200px, 1fr));
-  justify-content: center;
-  margin: 4rem;
-  box-shadow: 0 2rem 4rem 0.2rem rgba(63, 2, 33, 0.205);
-  .grid-items {
-    margin: 10px;
-    padding: 20px;
-    color: #3f0220;
-    border: 1px solid rgba(63, 2, 33, 0.205);
-    text-align: center;
-    font-size: 2rem;
-    img {
-      width: 100%;
-    }
-  }
+body {
+  padding: 3rem;
 }

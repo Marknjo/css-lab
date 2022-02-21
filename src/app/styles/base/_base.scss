@@ -68,4 +68,74 @@ body {
 }
 
 // Style heading component
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+%heading-sub-styles {
+  line-height: 1;
+  display: inline-block;
+}
+
+.heading-primary {
+  color: $white-color;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
+  &--main {
+    @extend %heading-sub-styles;
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: 3.5rem;
+    // Animations
+    animation: bounceLeft 0.3s ease-in-out forwards;
+  }
+  &--sub {
+    @extend %heading-sub-styles;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.4rem;
+
+    // Animations
+    animation: bounceRight 0.3s ease-in-out forwards;
+  }
+}
+
+// Animations
+@keyframes bounceLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes bounceRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  80% {
+    transform: translateX(-4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 // Style link button component

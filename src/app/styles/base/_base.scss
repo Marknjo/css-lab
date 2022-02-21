@@ -57,5 +57,15 @@ body {
 }
 
 // Style logo component
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
 // Style heading component
 // Style link button component

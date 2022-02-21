@@ -1,3 +1,63 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+// Style link button component
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    transition: all 0.4s;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translate(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &--white {
+    background-color: $white-color;
+    color: $dark-grey;
+
+    &::after {
+      background-color: $white-color;
+    }
+
+    &:active {
+      color: darker($dark-grey, 0.6);
+    }
+
+    &:hover::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+    }
+  }
+
+  &--animated {
+    animation: bounceFromBottom 0.3s ease-in-out backwards;
+  }
+}

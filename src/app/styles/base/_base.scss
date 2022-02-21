@@ -39,32 +39,3 @@ a {
 body {
   padding: 3rem;
 }
-
-%heading-sub-styles {
-  line-height: 1;
-  display: inline-block;
-}
-
-.heading-primary {
-  color: $white-color;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-
-  &--main {
-    @extend %heading-sub-styles;
-    font-size: 6rem;
-    font-weight: 100;
-    letter-spacing: 3.5rem;
-    // Animations
-    animation: bounceLeft 0.3s ease-in-out;
-  }
-  &--sub {
-    @extend %heading-sub-styles;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.4rem;
-
-    // Animations
-    animation: bounceRight 0.3s ease-in-out;
-  }
-}

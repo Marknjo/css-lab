@@ -52,4 +52,11 @@
       (100% - #{map.get($grid-gutter-horizontal, 'largest')} * 3) / 4
     );
   }
+
+  // Styel 1 of 3 by 4 grid in a row
+  .col-1-of-3 {
+    width: calc(
+      (100% - #{map.get($grid-gutter-horizontal, 'largest')} * 2) / 3
+    );
+  }
 }

@@ -14,10 +14,8 @@
     width: map.get($grid-width, 'max');
   }
 
-  &--fluid {
-    background-color: $light-grey;
-    margin: 0 auto;
-  }
+  // &--fluid {
+  // }
 }
 
 .row {
@@ -35,12 +33,6 @@
   // Select all direct childre and float them
   [class^='col-'] {
     float: left;
-
-    // @FIXME: Remove later
-    background-color: #d87093;
-    padding: 2rem;
-    font-size: map.get($font-size, 'medium');
-    color: $white-color;
 
     &:not(:last-child) {
       margin-right: map.get($grid-gutter-horizontal, 'largest');

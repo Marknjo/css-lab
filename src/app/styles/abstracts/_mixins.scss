@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+@use 'sass:map';
 
 /// Event wrapper
 /// @author Harry Roberts
@@ -37,4 +38,25 @@
   content: '';
   display: table;
   clear: both;
+}
+
+/// Utility margin Margins Generator
+/// @param {String} $position [top|bottom|right|left] Margin position
+// @param {String} $size-preference [large|small|medium|x-small|x-large] instructs the map.get the margin size from the predefined variables in the $size
+@mixin u-margins($position, $size-preference) {
+  @if ($position == bottom) {
+    margin-bottom: map.get($size, $size-preference) !important;
+  }
+
+  @if ($position == top) {
+    margin-top: map.get($size, $size-preference) !important;
+  }
+
+  @if ($position == left) {
+    margin-left: map.get($size, $size-preference) !important;
+  }
+
+  @if ($position == right) {
+    margin-right: map.get($size, $size-preference) !important;
+  }
 }

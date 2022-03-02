@@ -53,10 +53,15 @@
     );
   }
 
-  // Styel 1 of 3 by 4 grid in a row
+  // Style 1 of 3 by 4 grid in a row
   .col-1-of-3 {
     width: calc(
       (100% - #{map.get($grid-gutter-horizontal, 'largest')} * 2) / 3
     );
+  }
+
+  // Style 1 of 4 * 2 by 2 of 4 grid in a row or 1/2
+  .col-2-of-4 {
+    width: calc((100% - #{map.get($grid-gutter-horizontal, 'largest')}) / 2);
   }
 }

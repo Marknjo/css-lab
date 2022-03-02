@@ -1,6 +1,18 @@
 // -----------------------------------------------------------------------------
-// This file contains single utility classes.
+// This file contains single utility classes. u for utility, mb for margin-bottom
+// pb for margin bottom
 // -----------------------------------------------------------------------------
 @use 'sass:map';
 
 /// Margin generator
+.u-mb-lg {
+  @include u-margins('bottom', 'large');
+}
+
+.u-mb-md {
+  @include u-margins('bottom', 'medium');
+}
+
+.u-mb-sm {
+  @include u-margins('bottom', 'small');
+}

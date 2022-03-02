@@ -16,3 +16,15 @@
 .u-mb-sm {
   @include u-margins('bottom', 'small');
 }
+
+.u-pd-lg {
+  @include u-paddings('bottom', 'lg');
+}
+
+.u-pd-md {
+  @include u-paddings('bottom', 'md');
+}
+
+.u-pd-sm {
+  @include u-paddings('bottom', 'sm');
+}

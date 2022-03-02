@@ -1,3 +1,4 @@
+@use 'sass:map';
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
@@ -52,10 +53,58 @@ $breakpoints: (
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
-/// @example scss - When using a CDN
+/// @example scss - When using CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
 
 /// Sizes
 $font-base: 62.5%;
 $size-normal: 1.6rem;
+
+/// SIZES DEFINATION
+$size: (
+  'x-largest': 16rem,
+  'largest': 8rem,
+  'large': 6.4rem,
+  'medium': 4rem,
+  'normal': 2.4rem,
+  'small': 1.6rem,
+  'smallest': 1rem,
+  'x-smallest': 0.8rem,
+) !default;
+
+/// FONT SIZES DEFINATION
+$font-size: (
+  'x-largest': 8rem,
+  'largest': 5.6rem,
+  'large': 3.6rem,
+  'medium': 2rem,
+  'normal': 1.6rem,
+  'small': 1.2rem,
+  'smallest': 1rem,
+  'x-smallest': 0.8rem,
+) !default;
+
+/// GRID SIZE
+$grid-width: (
+  'max': 114rem,
+  'small': 37.5rem,
+) !default;
+
+/// GRID MARGINS HORIZONTAL
+$grid-gutter-horizontal: (
+  'largest': map.get($size, 'large'),
+  'large': map.get($size, 'medium'),
+  'medium': map.get($size, 'normal'),
+  'small': map.get($size, 'small'),
+  'smallest': map.get($size, 'x-smallest'),
+);
+
+// GRID MARGINS VERTICLE
+$grid-gutter-verticle: (
+  'largest': map.get($size, 'large'),
+  'large': map.get($size, 'medium'),
+  'medium': map.get($size, 'normal'),
+  'small': map.get($size, 'small'),
+  'smallest': map.get($size, 'x-smallest'),
+);

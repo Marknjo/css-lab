@@ -1,8 +1,43 @@
+@use 'sass:map';
 // -----------------------------------------------------------------------------
-// This file contains all styles related to site grit.
+// This file contains all styles related to site grid.
 // 1 by 2 * 2 grid
 // 1 by 4 * 4 grid
 // 1 by 3 * 3 grid
 // 1 by 4 * 2 and 2 by 4 * 1 grid
 // 1 by 3 and 2 by 3 grid
 // -----------------------------------------------------------------------------
+.grid {
+  width: map.get($grid-width, 'max');
+  background-color: $light-grey;
+  padding: 6rem;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  position: relative;
+
+  &::after {
+    @include clearFix;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: map.get($grid-gutter-verticle, 'largest');
+  }
+
+  // Select all direct childre and float them
+  [class^='col-'] {
+    float: left;
+
+    // @FIXME: Remove later
+    background-color: #d87093;
+    padding: 2rem;
+    font-size: map.get($font-size, 'medium');
+    color: $white-color;
+
+    &:not(:last-child) {
+      margin-right: map.get($grid-gutter-horizontal, 'largest');
+    }
+  }
+}

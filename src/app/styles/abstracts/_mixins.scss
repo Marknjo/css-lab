@@ -32,3 +32,9 @@
   }
 }
 
+/// Add a grid clear fix
+@mixin clearFix {
+  content: '';
+  display: table;
+  clear: both;
+}

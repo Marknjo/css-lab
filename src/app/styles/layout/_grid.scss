@@ -8,10 +8,16 @@
 // 1 by 3 and 2 by 3 grid
 // -----------------------------------------------------------------------------
 .grid {
-  width: map.get($grid-width, 'max');
-  background-color: $light-grey;
-  padding: 6rem;
   margin: 0 auto;
+
+  &--boxed {
+    width: map.get($grid-width, 'max');
+  }
+
+  &--fluid {
+    background-color: $light-grey;
+    margin: 0 auto;
+  }
 }
 
 .row {

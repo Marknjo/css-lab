@@ -4,7 +4,8 @@
 // -----------------------------------------------------------------------------
 @use 'sass:map';
 
-/// Margin generator
+/// MARGIN UTILITIES
+/// MARGIN BOTTOM UTILITIES
 .u-mb-lg {
   @include u-margins('bottom', 'large');
 }
@@ -17,6 +18,8 @@
   @include u-margins('bottom', 'small');
 }
 
+/// PADDING UTILITIES
+/// PADDING BOTTOM UTILITIES
 .u-pd-lg {
   @include u-paddings('bottom', 'lg');
 }

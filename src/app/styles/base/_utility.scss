@@ -31,3 +31,8 @@
 .u-pd-sm {
   @include u-paddings('bottom', 'sm');
 }
+
+/// Centering text
+.u-text-center {
+  text-align: center !important;
+}

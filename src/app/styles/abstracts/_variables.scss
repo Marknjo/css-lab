@@ -38,6 +38,10 @@ $mid-grey: #999999 !default;
 /// @type Color!
 $dark-grey: #777 !default;
 
+/// Black color
+/// @type Color!
+$black-color: #000 !default;
+
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
@@ -55,13 +59,15 @@ $breakpoints: (
 /// @type String
 /// @example scss - When using CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+$base-url: '../assets/' !default;
 
 /// Sizes
 $font-base: 62.5%;
 $size-normal: 1.6rem;
 
 /// SIZES DEFINATION
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual sizes
 $size: (
   'x-largest': 16rem,
   'largest': 8rem,
@@ -74,6 +80,8 @@ $size: (
 ) !default;
 
 /// FONT SIZES DEFINATION
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual lengths
 $font-size: (
   'x-largest': 8rem,
   'largest': 5.6rem,
@@ -86,12 +94,16 @@ $font-size: (
 ) !default;
 
 /// GRID SIZE
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual sizes
 $grid-width: (
   'max': 114rem,
   'small': 37.5rem,
 ) !default;
 
 /// GRID MARGINS HORIZONTAL
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $grid-gutter-horizontal: (
   'largest': map.get($size, 'large'),
   'large': map.get($size, 'medium'),
@@ -100,11 +112,24 @@ $grid-gutter-horizontal: (
   'smallest': map.get($size, 'x-smallest'),
 );
 
-// GRID MARGINS VERTICLE
+/// GRID MARGINS VERTICLE
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual gutter sizes
 $grid-gutter-verticle: (
   'largest': map.get($size, 'large'),
   'large': map.get($size, 'medium'),
   'medium': map.get($size, 'normal'),
   'small': map.get($size, 'small'),
   'smallest': map.get($size, 'x-smallest'),
+);
+
+/// Shadow
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual shadow sizes
+$shadow: (
+  'large': 0 3.6rem 5.6rem rgba($black-color, 0.15),
+  'medium': 0 1.2rem 3.6rem rgba($black-color, 0.15),
+  'small': 0 0.4rem 1.6rem rgba($black-color, 0.15),
+  'x-small': 0 0.2rem 0.8rem rgba($black-color, 0.15),
+  'tight': 0 0.1rem 0.2rem rgba($black-color, 0.15),
 );

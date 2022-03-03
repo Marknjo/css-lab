@@ -1,6 +1,8 @@
 /**
  * Basic typography style for copy text
  */
+@use 'sass:map';
+
 html {
   font-size: $font-base;
 }
@@ -11,4 +13,35 @@ body {
   font-size: 1.6rem;
   font-weight: 100;
   line-height: 1.7;
+}
+
+/// Heading typography
+
+.heading-secondary {
+  display: inline-block;
+  text-shadow: map.get($shadow, 'tight');
+  font-size: map.get($font-size, large);
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  cursor: default;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: skewX(-15deg) skewY(-3deg);
+    text-shadow: map.get($shadow, 'x-small');
+  }
+}
+
+.heading-3 {
+}
+
+.heading-4 {
 }

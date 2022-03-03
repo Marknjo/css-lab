@@ -15,9 +15,12 @@
 }
 
 .u-mb-sm {
-  @include u-margins('bottom', 'small');
+  @include u-margins('bottom', 'smallest');
 }
 
+.u-mb-xs {
+  @include u-margins('bottom', 'x-smallest');
+}
 /// PADDING UTILITIES
 /// PADDING BOTTOM UTILITIES
 .u-pd-lg {

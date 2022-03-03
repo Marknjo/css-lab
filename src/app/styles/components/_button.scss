@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 // Style link button component
 .btn {
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -37,6 +38,22 @@
   &:active {
     transform: translate(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &--text:link,
+  &--text:visited {
+    padding: 1.2rem 1.2rem 0.8rem 0.4rem;
+    border-radius: 0;
+    border-bottom: 2.4px solid $color-primary;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: $white-color;
+    }
   }
 
   &--white {

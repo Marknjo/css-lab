@@ -6,5 +6,21 @@
 .section-about {
   background-color: $light-grey-1;
   margin-top: -35vh;
-  padding: 30vh 2.4rem 15rem;
+  padding: 30vh 2.4rem 25rem;
+}
+
+//. Styling features section
+.section-features {
+  padding: 10rem 2rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  transform: skewY(-5.5deg);
+  margin-top: -7.5rem;
+
+  & > * {
+    transform: skewY(5.5deg);
+  }
 }

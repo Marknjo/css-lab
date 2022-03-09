@@ -5,6 +5,8 @@
   position: relative;
   height: 50rem;
   perspective: 150rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 
   &__side {
     border-radius: 3px;
@@ -18,16 +20,40 @@
     backface-visibility: hidden;
     box-shadow: map-get($shadow, medium);
     cursor: pointer;
+    overflow: hidden;
 
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     &--front {
-      background-color: orangered;
+      background-color: $white-color;
     }
 
     &--back {
-      background-color: olive;
       transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
     }
   }
 
@@ -37,5 +63,31 @@
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  /// STYLE BACKSIDE
+  &__cta {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+
+  &__price-box {
+    color: $white-color;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 5.6rem;
+    font-weight: 100;
   }
 }

@@ -22,6 +22,16 @@ $color-primary: #55c57a !default;
 $color-primary-light: #7ed56f !default;
 $color-primary-dark: #28b485 !default;
 
+/// Secondary colors
+/// @type Color
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+///Tertiary colors
+/// @type Color
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
 /// Light grey
 /// @type Color
 $white-color: #fff !default;

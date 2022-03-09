@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+@use 'sass:map';
 
 /// Styling the about section
 .section-about {
@@ -11,14 +12,18 @@
 
 //. Styling features section
 .section-features {
-  padding: 10rem 2rem;
+  padding: map-get($size, x-largest) map-get($size, normal);
   background-image: linear-gradient(
-    to right bottom,
-    $color-primary-light,
-    $color-primary-dark
-  );
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../assets/images/nat-4.jpg);
+  background-size: cover;
+  background-position: top center;
   transform: skewY(-5.5deg);
   margin-top: -7.5rem;
+  text-align: center;
 
   & > * {
     transform: skewY(5.5deg);

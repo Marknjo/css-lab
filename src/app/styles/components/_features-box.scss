@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains styles specific to the features component
+// -----------------------------------------------------------------------------
+@use 'sass:map';
+
+.feature-box {
+  background-color: $white-color;
+  padding: map.get($size, medium) map.get($size, normal);
+  box-shadow: map-get($shadow, small);
+  transition: all 0.2s;
+  border-radius: map.get($size, x-smallest);
+
+  &:hover {
+    box-shadow: map-get($shadow, large);
+  }
+
+  &__icon {
+    display: inline-block;
+    font-size: map-get($font-size, largest);
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  &__text {
+    font-size: map-get($font-size, small);
+    font-weight: 400;
+  }
+}

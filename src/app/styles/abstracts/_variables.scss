@@ -73,6 +73,7 @@ $size-normal: 1.6rem;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual sizes
 $size: (
+  'xx-largest': 24rem,
   'x-largest': 16rem,
   'largest': 8rem,
   'large': 6.4rem,

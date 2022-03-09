@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains card component styles
+// -----------------------------------------------------------------------------
+.card {
+  position: relative;
+  height: 50rem;
+  perspective: 150rem;
+
+  &__side {
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 100%;
+    color: $white-color;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: map-get($shadow, medium);
+    cursor: pointer;
+
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &--front {
+      background-color: orangered;
+    }
+
+    &--back {
+      background-color: olive;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}

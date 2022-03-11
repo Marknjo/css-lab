@@ -83,6 +83,12 @@ $base-url: '../assets/' !default;
 $font-base: 62.5%;
 $size-normal: 1.6rem;
 
+/// Default animation easing function
+/// @type Function
+/// @example scss - When using CDN
+$swing-animation-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$snap-animation-easing: cubic-bezier(0.87, 0, 0.13, 1);
+
 /// SIZES DEFINATION
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual sizes
@@ -94,6 +100,7 @@ $size: (
   'medium': 4rem,
   'normal': 2.4rem,
   'small': 1.6rem,
+  'x-small': 1.2rem,
   'smallest': 1rem,
   'x-smallest': 0.8rem,
 ) !default;
@@ -109,6 +116,7 @@ $font-size: (
   'medium': 2rem,
   'normal': 1.6rem,
   'small': 1.4rem,
+  'x-small': 1.2rem,
   'smallest': 1rem,
   'x-smallest': 0.8rem,
 ) !default;

@@ -44,6 +44,10 @@ $light-grey: #ededed !default;
 /// @type Color
 $light-grey-1: #f7f7f7 !default;
 
+/// Light grey 2
+/// @type Color
+$light-grey-2: #eee !default;
+
 /// Medium grey
 /// @type Color
 $mid-grey: #999999 !default;
@@ -101,6 +105,7 @@ $font-size: (
   'x-largest': 8rem,
   'largest': 5.6rem,
   'large': 3.6rem,
+  'x-medium': 2.4rem,
   'medium': 2rem,
   'normal': 1.6rem,
   'small': 1.4rem,

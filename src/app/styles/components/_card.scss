@@ -3,13 +3,13 @@
 // -----------------------------------------------------------------------------
 .card {
   position: relative;
-  height: 50rem;
+  height: 52rem;
   perspective: 150rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
   &__side {
-    border-radius: 3px;
+    border-radius: map-get($size, x-smallest);
     position: absolute;
     top: 0;
     left: 0;
@@ -26,6 +26,7 @@
 
     &--front {
       background-color: $white-color;
+      color: $dark-grey;
     }
 
     &--back {
@@ -89,5 +90,104 @@
   &__price-value {
     font-size: 5.6rem;
     font-weight: 100;
+  }
+
+  /// Style Card Front
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../assets/images/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../assets/images/nat-6.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../assets/images/nat-7.jpg);
+    }
+  }
+
+  &__title {
+    font-size: map-get($font-size, x-medium);
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $white-color;
+
+    position: absolute;
+    right: 2rem;
+    top: 12rem;
+    text-align: right;
+    width: 60%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &--1 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-secondary-light, 0.85),
+          rgba($color-secondary-dark, 0.85)
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-primary-light, 0.85),
+          rgba($color-primary-dark, 0.85)
+        );
+      }
+      &--3 {
+        background-image: linear-gradient(
+          to right,
+          rgba($color-tertiary-light, 0.85),
+          rgba($color-tertiary-dark, 0.85)
+        );
+      }
+    }
+  }
+
+  &__details {
+    margin-top: map-get($size, normal);
+    margin-bottom: map-get($size, normal);
+    font-size: map-get($font-size, normal);
+    font-weight: 300;
+    text-align: center;
+
+    ul {
+      width: 80%;
+      list-style: none;
+      margin: 0 auto;
+
+      li {
+        padding-bottom: 1rem;
+
+        &:not(:last-child) {
+          margin-bottom: map-get($size, smallest);
+          border-bottom: 1px solid $light-grey-2;
+        }
+      }
+    }
   }
 }

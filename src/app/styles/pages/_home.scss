@@ -32,7 +32,14 @@
 
 /// Stylign the tours section
 .section-tours {
-  padding: map-get($size, xx-largest) map-get($size, normal);
+  padding: map-get($size, xx-largest) map-get($size, normal)
+    map-get($size, x-largest);
   background-color: $light-grey-1;
   margin-top: -8rem;
+}
+
+/// Styling story section
+.section-story {
+  padding: map-get($size, x-largest) map-get($size, normal);
+  position: relative;
 }

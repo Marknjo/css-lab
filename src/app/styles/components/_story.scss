@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// This file contains section component styles
+// -----------------------------------------------------------------------------
+@use 'sass:map';
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: map-get($shadow, medium);
+  margin-bottom: map-get($size, large);
+  background-color: rgba($white-color, 0.6);
+  border-radius: map-get($size, x-smallest);
+  padding: map-get($size, large) map-get($size, large) 10rem;
+  font-size: map-get($font-size, normal);
+  transform: skewX(-12deg);
+  position: relative;
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+}

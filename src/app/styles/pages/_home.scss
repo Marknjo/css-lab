@@ -56,8 +56,6 @@
 
 /// Book section content
 .book {
-  height: 50rem; // @FIXME: remove
-
   background-image: linear-gradient(
       105deg,
       $white-color 0%,
@@ -67,7 +65,7 @@
     ),
     url(../assets/images/nat-10.jpg);
   background-size: cover;
-  background-position: top left;
+  background-position: bottom left;
   background-repeat: no-repeat;
   border-radius: map.get($size, x-smallest);
   box-shadow: map.get($shadow, medium);

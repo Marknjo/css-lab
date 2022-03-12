@@ -43,3 +43,37 @@
   padding: map-get($size, x-largest) map-get($size, normal);
   position: relative;
 }
+
+/// Style section booking
+.section-book {
+  padding: map-get($size, x-largest) map-get($size, normal);
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+/// Book section content
+.book {
+  height: 50rem; // @FIXME: remove
+
+  background-image: linear-gradient(
+      105deg,
+      $white-color 0%,
+      rgba($white-color, 0.95) 55%,
+      transparent 55%,
+      transparent 100%
+    ),
+    url(../assets/images/nat-10.jpg);
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
+  border-radius: map.get($size, x-smallest);
+  box-shadow: map.get($shadow, medium);
+
+  &__content {
+    width: 50%;
+    padding: map-get($size, x-medium);
+  }
+}

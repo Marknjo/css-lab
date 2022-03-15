@@ -58,4 +58,51 @@
     visibility: hidden;
     transform: translateY(-4rem);
   }
+
+  /// Style Radio Buttons
+  &__radio-group {
+    font-weight: 300;
+    display: inline-block;
+    width: 48%;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3.2rem;
+  }
+
+  &__radio-btn {
+    display: inline-block;
+    height: map.get($size, normal);
+    width: map.get($size, normal);
+    border-radius: 50%;
+    border: 4px solid $color-primary;
+    margin-bottom: -5rem;
+    position: absolute;
+    top: 2px;
+    left: -3.2rem;
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+
+      content: '';
+      display: none;
+      height: map.get($size, x-smallest);
+      width: map.get($size, x-smallest);
+      border-radius: 50%;
+      background-color: $color-primary;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label > &__radio-btn::before {
+    display: block;
+  }
 }

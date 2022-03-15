@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to form component.
+// -----------------------------------------------------------------------------
+@use 'sass:map';
+
+/// Form element
+.form {
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: map.get($size, normal);
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    color: inherit;
+    font-weight: 300;
+    background-color: rgba($white-color, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: map.get($size, smallest) map.get($size, smallest);
+    width: 90%;
+    display: block;
+    transition: all 0.3s;
+
+    &::-webkit-input-placeholder {
+      color: $mid-grey;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: map.get($shadow, small);
+      border-bottom-color: $color-primary;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus:invalid {
+      border-bottom-color: $color-secondary-dark;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-left: map.get($size, smallest);
+    margin-top: map.get($size, x-smallest);
+    font-weight: 300;
+    font-size: map.get($font-size, small);
+    color: $mid-grey;
+    transition: all 0.3s;
+  }
+
+  // Animate label
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  /// Style Radio Buttons
+}

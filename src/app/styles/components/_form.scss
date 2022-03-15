@@ -7,7 +7,7 @@
 .form {
   &__group {
     &:not(:last-child) {
-      margin-bottom: map.get($size, normal);
+      margin-bottom: map.get($size, small);
     }
   }
 
@@ -58,6 +58,4 @@
     visibility: hidden;
     transform: translateY(-4rem);
   }
-
-  /// Style Radio Buttons
 }

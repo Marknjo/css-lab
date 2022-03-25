@@ -12,6 +12,7 @@
 
   &:hover {
     box-shadow: map-get($shadow, large);
+    transform: translateY(-1rem);
   }
 
   &__icon {

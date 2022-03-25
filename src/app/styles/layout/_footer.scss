@@ -21,7 +21,7 @@
     height: map.get($size, largest);
   }
 
-  /// Footer navigation
+  /// General styles Footer navigation & Copyright section
   &__nav,
   &__copyright {
     padding: 0 map.get($size, normal);
@@ -29,6 +29,7 @@
     padding-top: map.get($size, small);
   }
 
+  /// Footer Navigation
   &__list {
     margin-bottom: map.get($size, large);
   }
@@ -58,5 +59,16 @@
       transform: rotate(-4deg) scale(1.1);
       text-decoration: none;
     }
+  }
+
+  /// Copyright section
+  &__copyright {
+    float: right;
+    line-height: 1.6;
+  }
+
+  &__copyright &__link {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

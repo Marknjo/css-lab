@@ -20,4 +20,43 @@
     margin: 0 auto;
     height: map.get($size, largest);
   }
+
+  /// Footer navigation
+  &__nav,
+  &__copyright {
+    padding: 0 map.get($size, normal);
+    border-top: 1px solid $dark-grey;
+    padding-top: map.get($size, small);
+  }
+
+  &__list {
+    margin-bottom: map.get($size, large);
+  }
+
+  &__list-item {
+    display: inline-block;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      background-color: $dark-grey-1;
+      display: block;
+      padding: 0.4rem map.get($size, smallest);
+      display: inline-block;
+      text-transform: uppercase;
+      transition: all 0.2s;
+
+      &:not(:last-of-type) {
+        margin-right: map.get($size, smallest);
+      }
+    }
+    &:hover,
+    &:active {
+      color: $color-primary;
+      background-color: map.get($shadow, small);
+      transform: rotate(-4deg) scale(1.1);
+      text-decoration: none;
+    }
+  }
 }

@@ -42,9 +42,8 @@
     &:link,
     &:visited {
       background-color: $dark-grey-1;
-      display: block;
-      padding: 0.4rem map.get($size, smallest);
       display: inline-block;
+      padding: 0.4rem map.get($size, smallest);
       text-transform: uppercase;
       transition: all 0.2s;
 
@@ -52,12 +51,15 @@
         margin-right: map.get($size, smallest);
       }
     }
+    &:focus-visible,
+    &:focus,
     &:hover,
     &:active {
       color: $color-primary;
-      background-color: map.get($shadow, small);
+      box-shadow: 0 1rem 2.4rem rgb(0 0 0 / 40%);
       transform: rotate(-4deg) scale(1.1);
       text-decoration: none;
+      outline: none;
     }
   }
 

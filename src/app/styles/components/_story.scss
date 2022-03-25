@@ -15,6 +15,11 @@
   transform: skewX(-12deg);
   position: relative;
 
+  &__container {
+    display: inline-block;
+    transform: skewX(12deg);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -23,7 +28,7 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
 
-    transform: translateX(-3rem) skewX(12deg);
+    transform: translateX(-3rem);
     overflow: hidden;
   }
 
@@ -36,7 +41,6 @@
   }
 
   &__text {
-    transform: skewX(12deg);
   }
 
   &__caption {

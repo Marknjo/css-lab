@@ -1,5 +1,11 @@
-installs.txt
+*.txt
+*.jpg
+*.jpeg
+*.png
+*.svg
+*.mp4
+*.webm
 node_modules
 public
-installs.txt
+
 *.env

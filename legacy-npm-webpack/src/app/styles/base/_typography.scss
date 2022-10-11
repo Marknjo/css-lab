@@ -3,5 +3,74 @@
  */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  font-style: $text-font-stack;
+  line-height: 1.6;
+}
+
+.p {
+  font-size: 1.8rem;
+}
+
+/**
+* Basic headings formating
+*/
+%h-template {
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.h1 {
+  @extend %h-template;
+  text-align: center;
+  &--main,
+  &--sub {
+    display: block;
+  }
+
+  &--main {
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3.5rem;
+    animation: bounce-left 2s 1s backwards;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.75rem;
+    animation: bounce-right 2s 3s backwards;
+  }
+}
+
+.h2 {
+  @extend %h-template;
+  font-size: 5rem;
+  text-align: center;
+  color: transparent;
+
+  display: block;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+    90deg,
+    $brand-color-light,
+    $brand-color-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.2s;
+
+  &:hover {
+    text-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    transform: skewX(1deg) skewY(2deg);
+  }
+}
+
+.h3 {
+  @extend %h-template;
+  font-size: 2rem;
+}
+
+.h4 {
+  @extend %h-template;
 }

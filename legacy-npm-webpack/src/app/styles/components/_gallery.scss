@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Gallery Component.
+// -----------------------------------------------------------------------------
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  &__container {
+    position: absolute;
+    box-sizing: content-box;
+    top: 2rem;
+
+    display: block;
+
+    &--1 {
+      left: 2rem;
+      z-index: 1;
+    }
+
+    &--2 {
+      top: 12rem;
+      left: 12rem;
+      z-index: 3;
+    }
+
+    &--3 {
+      top: 6rem;
+      right: 2rem;
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    //@include centerBox;
+    outline: 1.2rem solid transparent;
+    transform: scale(0.9);
+    display: inline-block;
+
+    box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+
+    transition: all 0.2s ease-in;
+  }
+
+  &__container:hover {
+    z-index: 5;
+  }
+
+  &__container:hover &__img {
+    outline-offset: 1.2rem;
+    outline-color: $brand-color;
+    transform: scale(1);
+    box-shadow: 0 4rem 8rem rgba(#000, 0.2);
+  }
+}

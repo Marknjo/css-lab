@@ -35,25 +35,25 @@ Current Projects in this repo
 
     - Each project has a similar structure
 
-    ├── Public/                              # Distribution files
-    ├── src/                                 # Source files
-    |   |
-    |   ├── App/
-    |   |   ├── assets/                      # Assets directory
-    │   |   │   ├── images/                  # Image directory
-    │   |   |   └── fonts/                   # Fonts directory
-    │   |   ├── styles/                      # SCSS files
-    |   |   │   └── dirs/                    # SCSS directories (Follows 7-1 architecture pattern)
-    │   |   └── scrips/                      # JS files
-    |   |       └── app.js
-    │   ├── pages/                           # Optional pages folder (Put your website different pages here)
-    │   ├── index.js                         # Load SCSS and JS
-    │   └── index.html                       # The default template for the website
-    ├── .gitignore                           # Git ignored files
-    ├── .prettierrc                          # Prettier settings
-    ├── postcss.config.js                    # Post CSS configuration file. (Adds autoprefixing support)
-    ├── README.md                            # You are reading this
-    └── vite.config.js                    # Webpack entry config file
+    ├── Public/                          # Distribution files
+    ├── src/                             # Source files
+    │   │
+    │   │
+    │   ├── assets/                      # Assets directory
+    │   │   ├── images/                  # Image directory
+    │   │   └── fonts/                   # Fonts directory
+    │   ├── styles/                      # SCSS files
+    |   |   └── dirs/                    # SCSS directories (Follows 7-1 architecture pattern)
+    │   └── scrips/                      # JS files
+    │       └── app.js
+    │
+    ├──  main.js                         # Load SCSS and JS
+    ├── index.html                       # The default template for the website
+    ├── .gitignore                       # Git ignored files
+    ├── .prettierrc                      # Prettier settings
+    ├── postcss.config.js                # Post CSS configuration file. (Adds autoprefixing support)
+    ├── README.md                        # You are reading this
+    └── vite.config.js                   # Webpack entry config file
 
 ## :scroll: QuickStart
 

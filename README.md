@@ -9,7 +9,8 @@ Repo for learning and experimenting with CSS.
 Current Projects in this repo
 
 1. Legacy - Running workflow with webpack. Migrated project to **Vite**
-2. CSS-GRID
+2. Template -> setup a **multi-pages** dev template (copy and rename the folder, then `cd <project-name>` and run `pnpm install`). Supports Tailwind and CSS.
+3. CSS-GRID
    Everything about CSS grids.
 
 ## :anger: Requirement
@@ -37,21 +38,30 @@ Current Projects in this repo
 
     ├── Public/                          # Distribution files
     ├── src/                             # Source files
-    │   │
-    │   │
     │   ├── assets/                      # Assets directory
     │   │   ├── images/                  # Image directory
     │   │   └── fonts/                   # Fonts directory
     │   ├── styles/                      # SCSS files
     |   |   └── dirs/                    # SCSS directories (Follows 7-1 architecture pattern)
-    │   └── scrips/                      # JS files
-    │       └── app.js
+    │   │
+    │   ├── pages/                       # Multi-pages support - index.html becomes the entry file -> mainly listing links or just a homepage
+    │   │   └── dirs/                    # Different pages i.e. template
+    │   │         ├── styles/            # Page stylesheets (SCSS) folder i.e. template.scss
+    │   │         ├── js/                # Page Javascript i.e. template.ts
+    │   │         └── page.html          # Page entry i.e. template.html
+    │   │
+    │   ├── scrips/                      # JS/typescript files
+    │   │   └── fouc-fix.ts
+    │   │
+    │   └──  main.js                         # Load SCSS and JS
     │
-    ├──  main.js                         # Load SCSS and JS
     ├── index.html                       # The default template for the website
     ├── .gitignore                       # Git ignored files
     ├── .prettierrc                      # Prettier settings
-    ├── postcss.config.js                # Post CSS configuration file. (Adds autoprefixing support)
+    ├── index.html                       # project vite entry file (multi-pages or not)
+    ├── postcss.config.cjs               # Post CSS configuration file. (Adds autoprefixing and tailwind support)
+    ├── tailwind.config.cjs              # Optional -> tailwind config file
+    ├── tsconfig.ts                      # Optional -> typescript config file
     ├── README.md                        # You are reading this
     └── vite.config.js                   # Webpack entry config file
 

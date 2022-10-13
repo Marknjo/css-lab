@@ -19,6 +19,12 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         template: resolve(root, 'pages', 'template', 'template.html'),
         gridIntro: resolve(root, 'pages', 'grid-intro', 'intro.html'),
+        challengeLayout: resolve(
+          root,
+          'pages',
+          'challenge-layout',
+          'layout.html'
+        ),
       },
     },
   },

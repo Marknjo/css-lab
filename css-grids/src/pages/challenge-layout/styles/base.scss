@@ -1,3 +1,46 @@
 /**
  * None Tailwind CSS 
  */
+.container {
+  width: 90vw;
+  margin: 30px auto;
+  color: rgb(245, 237, 237);
+  font-size: 20px;
+  & > * {
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  display: grid;
+  grid-template-rows: 80px 200px 350px 80px;
+  grid-template-columns: repeat(3, 20%) 1fr;
+
+  gap: 30px;
+
+  .header {
+    grid-column: 1 / -1;
+  }
+
+  .box {
+    grid-row: 2 / 3;
+  }
+
+  .box-1 {
+  }
+  .box-2 {
+  }
+  .box-3 {
+  }
+  .sidebar {
+    grid-row: 2 / 4;
+  }
+  .main-content {
+    grid-column: 1 / 4;
+    // grid-row: 3 /;
+  }
+  .footer {
+    grid-column: 1 / -1;
+  }
+}

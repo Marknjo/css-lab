@@ -18,7 +18,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         template: resolve(root, 'pages', 'template', 'template.html'),
-        // about: resolve(root, 'pages', 'rich-text-editor', 'rte.html'),
+        gridIntro: resolve(root, 'pages', 'grid-intro', 'intro.html'),
       },
     },
   },

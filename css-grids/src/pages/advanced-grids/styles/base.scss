@@ -4,6 +4,7 @@
 
 .grid-container {
   max-width: 1000px;
+  // height: 1000px;
   margin: 30px auto;
 
   display: grid;
@@ -11,8 +12,13 @@
   grid-template-columns: repeat(2, 1fr);
 
   gap: 20px;
-  grid-auto-flow: column dense;
-  grid-auto-columns: 1fr;
+  grid-auto-flow: row dense;
+  // grid-auto-columns: 1fr;
+
+  // align-items: center;
+  // justify-items: center;
+  // align-content: ;
+  // justify-content: end;
 
   .item {
     background-color: orangered;
@@ -20,5 +26,22 @@
     color: #fffbf9;
     font-size: 18px;
     font-family: sans-serif;
+
+    &--4 {
+      background-color: crimson;
+      grid-row: 2 / span 3;
+      align-self: stretch;
+      justify-self: stretch;
+    }
+
+    &--6 {
+      background-color: lightcoral;
+      grid-row: 2 / span 2;
+    }
+
+    &--7 {
+      background-color: palevioletred;
+      grid-column: 1 / -1;
+    }
   }
 }

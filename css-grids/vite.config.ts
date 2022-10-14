@@ -25,6 +25,13 @@ export default defineConfig({
           'challenge-layout',
           'layout.html'
         ),
+
+        advancedGrids: resolve(
+          root,
+          'pages',
+          'advanced-grids',
+          'advanced.html'
+        ),
       },
     },
   },

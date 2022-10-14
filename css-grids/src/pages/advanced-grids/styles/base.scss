@@ -45,32 +45,95 @@
 //     }
 //   }
 // }
+/// using min-content, max-content, minmax() function
+// .grid-container {
+//   max-width: 1000px;
+//   margin: 30px auto;
 
+//   display: grid;
+//   // grid-template-rows: repeat(2, 150px);
+//   // grid-template-rows: repeat(2, min-content);
+//   // grid-template-rows: 150px min-content;
+//   grid-template-rows: repeat(2, minmax(100px, min-content));
+//   // grid-template-columns: min-content repeat(3, 1fr);
+//   // grid-template-columns: min-content repeat(2, 1fr) max-content;
+//   // grid-template-columns: min-content repeat(2, 1fr) min-content;
+//   // grid-template-columns: max-content repeat(2, 1fr) min-content;
+//   // grid-template-columns: min-content repeat(2, 1fr) min-content;
+//   // grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+//   // grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+//   grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+
+//   gap: 20px;
+
+//   .item {
+//     padding: 8px 20px;
+//     font-size: 18px;
+//     font-family: sans-serif;
+//     color: rgb(245, 245, 245);
+
+//     &--1 {
+//       background-color: darkgoldenrod;
+//     }
+
+//     &--2 {
+//       background-color: limegreen;
+//     }
+
+//     &--3 {
+//       background-color: blueviolet;
+//     }
+
+//     &--4 {
+//       background-color: palevioletred;
+//     }
+
+//     &--5 {
+//       background-color: darkcyan;
+//     }
+
+//     &--6 {
+//       background-color: goldenrod;
+//     }
+
+//     &--7 {
+//       background-color: brown;
+//     }
+
+//     &--8 {
+//       background-color: darkkhaki;
+//     }
+//   }
+// }
+
+/**
+* Auto-fit and auto-fill
+**/
 .grid-container {
-  max-width: 1000px;
+  box-sizing: border-box;
+  // max-width: 1200px;
+  width: 90%;
   margin: 30px auto;
 
   display: grid;
-  // grid-template-rows: repeat(2, 150px);
-  // grid-template-rows: repeat(2, min-content);
-  // grid-template-rows: 150px min-content;
   grid-template-rows: repeat(2, minmax(100px, min-content));
-  // grid-template-columns: min-content repeat(3, 1fr);
-  // grid-template-columns: min-content repeat(2, 1fr) max-content;
-  // grid-template-columns: min-content repeat(2, 1fr) min-content;
-  // grid-template-columns: max-content repeat(2, 1fr) min-content;
-  // grid-template-columns: min-content repeat(2, 1fr) min-content;
-  // grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
-  // grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
-  grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+  // grid-template-columns: repeat(auto-fill, 100px);
+  // grid-template-columns: repeat(auto-fit, 100px);
+  // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   gap: 20px;
 
   .item {
-    padding: 8px 20px;
+    box-sizing: inherit;
+    // padding: 8px 20px;
+
     font-size: 18px;
     font-family: sans-serif;
     color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &--1 {
       background-color: darkgoldenrod;

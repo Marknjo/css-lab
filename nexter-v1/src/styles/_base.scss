@@ -34,3 +34,16 @@ body {
   line-height: 1.6;
   color: $color-grey-dark-2;
 }
+
+.container {
+  max-width: 142.5rem;
+
+  display: grid;
+
+  grid-template-rows: 80vh min-content 40vh repeat(3, min-content);
+  grid-template-columns:
+    [side-start] 8rem [side-end full-start] minmax(2rem, 1fr)
+    [center-start]repeat(8, [cst] minmax(min-content, 14rem) [ced])
+    [center-end] minmax(2rem, 1fr)
+    [full-end]; // cst -> col-start, ced -> col-end
+}

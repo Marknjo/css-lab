@@ -1,0 +1,18 @@
+////////////////////////////////////////
+/// Story Section
+
+.story {
+  /**
+  *  Picture section
+  */
+  &__pictures {
+    background-color: $color-primary;
+  }
+
+  /**
+  *  Content section
+  */
+  &__content {
+    background-color: $color-grey-light-1;
+  }
+}

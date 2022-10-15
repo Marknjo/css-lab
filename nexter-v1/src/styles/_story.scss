@@ -7,6 +7,7 @@
   */
   &__pictures {
     background-color: $color-primary;
+    grid-column: full-start / ced 4;
   }
 
   /**
@@ -14,5 +15,6 @@
   */
   &__content {
     background-color: $color-grey-light-1;
+    grid-column: cst 5 / full-end;
   }
 }

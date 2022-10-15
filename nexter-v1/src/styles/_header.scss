@@ -2,5 +2,7 @@
 /// Header Section
 
 .header {
-  background-color: $color-secondary;
+  background-color: $color-primary-dark;
+  grid-column: full-start / ced 6;
+  grid-row: 1 / 2;
 }

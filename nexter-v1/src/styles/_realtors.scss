@@ -3,4 +3,6 @@
 
 .realtors {
   background-color: $color-secondary;
+  grid-column: cst 7 / full-end;
+  grid-row: 1 / 2;
 }

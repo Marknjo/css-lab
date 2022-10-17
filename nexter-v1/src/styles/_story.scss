@@ -16,5 +16,22 @@
   &__content {
     background-color: $color-grey-light-1;
     grid-column: cst 5 / full-end;
+
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 2rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  &__btn {
+    align-self: flex-start;
   }
 }

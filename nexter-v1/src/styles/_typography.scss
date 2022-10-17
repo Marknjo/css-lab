@@ -1,0 +1,27 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.h1 {
+}
+
+.h2 {
+}
+
+.h3 {
+}
+
+.h4 {
+  @extend %heading;
+  font-size: 1.9rem;
+
+  &--light {
+    color: $color-grey-dark-1;
+  }
+
+  &--dark {
+    color: $color-grey-dark-1;
+  }
+}

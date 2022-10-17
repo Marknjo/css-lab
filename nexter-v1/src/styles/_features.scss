@@ -7,7 +7,31 @@
   margin: 15rem 0;
 
   display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
   gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  column-gap: 1.5rem;
+
+  grid-template-columns:
+    [icon-start] min-content [icon-end content-start] 1fr
+    [content-end];
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-column: icon-start / icon-end;
+    grid-row: 1 / -1;
+    transform: translateY(-1rem);
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    grid-column: content-start / content-end;
+  }
 }

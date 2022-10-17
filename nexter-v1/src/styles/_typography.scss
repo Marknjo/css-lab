@@ -6,6 +6,7 @@
 }
 
 .h1 {
+  @extend %heading;
 }
 
 .h2 {
@@ -23,6 +24,7 @@
 
   &--small {
     font-size: 1.6rem;
+    font-style: normal;
     color: $color-primary;
     text-transform: uppercase;
   }

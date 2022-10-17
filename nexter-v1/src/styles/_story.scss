@@ -17,18 +17,19 @@
     background-color: $color-grey-light-1;
     grid-column: cst 5 / full-end;
 
-    padding: 6rem 12rem;
+    padding: 6.4rem 8vw;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    gap: 2rem;
+    gap: 1.6rem;
   }
 
   &__text {
     font-size: 1.5rem;
     font-style: italic;
+    margin-bottom: 3.6rem;
   }
 
   &__btn {
